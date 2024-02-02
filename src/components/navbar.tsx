@@ -14,8 +14,10 @@ const NavBar = () => {
     const [queryText, setQueryText] = useState("");
 
     const handleClick = () => {
-        let path = 'search-results/' + queryText
-        navigate(path)
+        if(queryText != "") {
+            let path = 'search-results/' + queryText
+            navigate(path)
+        }
     }
 
     const navigateHome = () => {
